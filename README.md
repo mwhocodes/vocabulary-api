@@ -27,7 +27,7 @@ $ json-server --watch db.json
 
 _You will get json at https://localhost:3000_
 
-5. **Add package.json, package-lock.json, json-server**
+3. **Add package.json, package-lock.json, json-server**
 
 ```bash
 $ npm init -y
@@ -35,7 +35,7 @@ $ npm i
 $ npm i json-server --registry https://registry.npmjs.org/
 ```
 
-6. **Write a script at package.json**
+4. **Write a script at package.json**
 
 ```json
 ...
@@ -43,7 +43,7 @@ $ npm i json-server --registry https://registry.npmjs.org/
     "start": "node server.js"}
 ```
 
-3. **Create a file server.js**
+5. **Create a file server.js**
 
 ```js
 const jsonServer = require('json-server')
@@ -57,30 +57,31 @@ server.use(router)
 server.listen(port)
 ```
 
-7. **Add .gitignore**
+6. **Add .gitignore**
 
 ```gitignore
 node_modules
 ```
 
-4. **Push git**
+7. **Push git**
 
 ```bash
 $ git init
 $ git add .
 $ git commit -m "initial commit"
-$ git remote add origin https://github.com/mwhocodes/vocab-api.git
+$ git remote add origin https://github.com/mwhocodes/name-of-app.git
 $ git push -u origin master
 ```
 
-5. **Install Heroku and deploy app to heroku**
+8. **Install Heroku and deploy app to heroku**
 
 ```bash
 $ brew install heroku/brew/heroku
-$ sudo npm i -g heroku --registry https://registry.npmjs.org/
 $ heroku --version
 $ heroku create name-of-app
 $ heroku login
 $ git push heroku master
 $ heroku open
 ```
+
+Let see the result: [my-vocab-api](https://tranquil-forest-22446.herokuapp.com/topic)
